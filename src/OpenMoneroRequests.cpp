@@ -96,7 +96,7 @@ OpenMoneroRequests::login(const shared_ptr<Session> session, const Bytes & body)
     // marks if this is new account creation or not
     bool new_account_created {false};
 
-    auto acc = select_account(xmr_address, view_key, false);
+    auto acc = select_account(xmr_address, view_key, true);
 
     // first check if new account
     // select this account if its existing one
