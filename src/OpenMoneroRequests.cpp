@@ -1912,6 +1912,25 @@ OpenMoneroRequests::get_version(
     session->close( OK, response_body, response_headers);
 }
 
+void
+OpenMoneroRequests::get_status(
+        const shared_ptr< Session > session,
+        const Bytes & body)
+{
+
+    (void) body;
+
+    json j_response {
+        {"threads_count", to_string(current_bc_status->thread_map_size()),
+    };
+
+    string response_body = j_response.dump();
+
+    auto response_headers = make_headers({{ "Content-Length",
+                                            to_string(response_body.size())}});
+
+    session->close( OK, response_body, response_headers);
+}
 
 shared_ptr<Resource>
 OpenMoneroRequests::make_resource(

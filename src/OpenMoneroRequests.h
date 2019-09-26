@@ -112,6 +112,9 @@ public:
     void
     get_version(const shared_ptr< Session > session, const Bytes & body);
 
+    void
+    get_status(const shared_ptr< Session > session, const Bytes & body);
+
     shared_ptr<Resource>
     make_resource(function< void (OpenMoneroRequests&, const shared_ptr< Session >, const Bytes& ) > handle_func,
                   const string& path);

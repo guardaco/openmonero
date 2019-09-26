@@ -269,7 +269,7 @@ MAKE_RESOURCE(import_wallet_request);
 MAKE_RESOURCE(import_recent_wallet_request);
 MAKE_RESOURCE(get_tx);
 MAKE_RESOURCE(get_version);
-
+MAKE_RESOURCE(get_status);
 // restbed service
 Service service;
 
