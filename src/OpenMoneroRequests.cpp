@@ -1921,7 +1921,7 @@ OpenMoneroRequests::get_status(
     (void) body;
 
     json j_response {
-        {"threads_count", to_string(current_bc_status->thread_map_size()),
+        {"threads_count", to_string(current_bc_status->thread_map_size())}
     };
 
     string response_body = j_response.dump();
