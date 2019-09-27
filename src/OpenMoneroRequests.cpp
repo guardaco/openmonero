@@ -1901,7 +1901,8 @@ OpenMoneroRequests::get_version(
         {"testnet"             , current_bc_status->get_bc_setup().net_type
                     == network_type::TESTNET},
         {"network_type"        , current_bc_status->get_bc_setup().net_type},
-        {"blockchain_height"   , get_current_blockchain_height()}
+        {"blockchain_height"   , get_current_blockchain_height()},
+        {"threads_count", to_string(current_bc_status->thread_map_size())}
     };
 
     string response_body = j_response.dump();
