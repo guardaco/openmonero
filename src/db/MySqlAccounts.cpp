@@ -10,6 +10,8 @@
 
 #include "ssqlses.h"
 
+#include "../om_log.h"
+
 namespace xmreg
 {
 
