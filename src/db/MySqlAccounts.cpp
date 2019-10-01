@@ -289,6 +289,8 @@ MySqlAccounts::insert(const T& data_to_insert)
 
         if (sr.rows() == 1)
             return sr.insert_id();
+        
+        OMERROR << sr << ": MYSQL LOG";
 
     }
     catch (std::exception const& e)
