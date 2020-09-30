@@ -128,7 +128,8 @@ OpenMoneroRequests::login(const shared_ptr<Session> session, const Bytes & body)
 
     j_response["start_height"] = acc->start_height;
     j_response["scanned_block_height"]    = acc->scanned_block_height;
-
+    j_response["blockchain_height"] = get_current_blockchain_height();
+    
     // so by now new account has been created or it already exists
     // so we just login into it.
     
